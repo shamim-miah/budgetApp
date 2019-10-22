@@ -1,0 +1,230 @@
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+body{
+font-family:Open Sans;
+font-size: 16px;
+font-weight: 400;
+}
+.right{
+	float: right;
+}
+.top {
+	height: 253px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),url(back.png);
+	position: relative;
+}
+
+.budget {
+	position: absolute;
+	width: 350px;
+	top: 52%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+.budget_title {
+	font-size: 18px;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.budget_title_month{}
+.budget_value {
+	font-size: 46px;
+	letter-spacing: 2px;
+	text-align: center;
+	margin-bottom: 25px;
+	font-weight: 300;
+}
+.budget_income {
+	background: #28B9B5;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+.budget_income_text,.budget_expense_text{
+	float: left;
+	color: #444;
+	font-size: 13px;
+}
+.budget_income_value,.budget_expense_value{
+	float: left;
+}
+.budget_income_percentage,.budget_expense_percentage {
+	float: left;
+	width: 34px;
+	margin-left: 10px;
+	padding: 3px 0;
+	font-size: 11px;
+}
+.budget_expenses {
+	background: #FF5049;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.red{
+	color: #FF5049 !important;
+}
+.red-focus:focus{
+  border: 2px solid #FF5049 !important;
+}
+.budget_expenses,.budget_income{
+	padding: 12px;
+	text-transform: uppercase;
+	height: 46px;
+}
+.budget_expense_percentage {
+	border-radius: 3px;
+	background-color: rgba(255,255,255,0.2);
+	text-align: center;
+}
+.add {
+	border: 1px solid #e7e7e7;
+	background: #f7f7f7;
+	padding: 14px;
+}
+.add_container {
+	text-align: center;
+	margin: 0 auto;
+}
+.add_type {
+	width: 55px;
+	height: 44px;
+	border: 1px solid #e7e7e7;
+	margin-right: 10px;
+	font-size: 18px;
+	color: inherit;
+	font-weight: 300;
+	transition: border 0.3s;
+	background-color: #fff;
+}
+.add_description{
+	width: 400px;
+}
+.add_description, .add_value {
+	color: inherit;
+	padding: 12px 15px;
+	border-radius: 5px;
+	border: 1px solid #e7e7e7;
+	font-size: 14px;
+	margin-right: 10px;
+	background-color: #fff;
+	color: inherit;
+	font-family: inherit;
+}
+.add_value{
+	width: 100px;
+}
+.add_btn {
+	font-size: 35px;
+	border: none;
+	background: no-repeat;
+	color: #28B9B5;
+	margin-left: 10px;
+	line-height: 1.1;
+	vertical-align: middle;
+	cursor: pointer;
+	display: inline-block;
+}
+
+
+/*:::::::::::::list::::::::::;*/
+
+.container {
+	width: 1000px;
+	margin: 60px auto;
+}
+.income {
+    float: left;
+    width: 475px;
+    margin-right: 50px;
+    text-align: center;
+    border: 1px solid #e7e7e7;
+}
+.income_title{
+	color: #28B9B5;
+}
+ h2{
+	font-weight: 400;
+	font-size: 18px;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+.income_list{}
+.expenses {
+	width: 475px;
+	float: left;
+	border: 1px solid #e7e7e7;
+	text-align: center;
+}
+.expenses_title{
+	color: #FF5049;
+}
+.expenses_list{}
+.item {
+	padding: 13px;
+	border-bottom: 1px solid #e7e7e7;
+}
+.item:first-child{
+    border-top: 1px solid #e7e7e7;
+}
+.item:nth-child(even){
+    background-color: #f7f7f7;
+}
+.item_description{
+    float: left;
+}
+.item_value {
+	float: left;
+	transition: transform 0.3s;
+}
+.item__percentage {
+	float: left;
+	width: 32px;
+	margin-left: 20px;
+	font-size: 11px;
+	border-radius: 3px;
+	background-color: #ffdad9;
+	text-align: center;
+	transition: transform 0.3s;
+	padding: 3px;
+}
+
+.income .item_value,.income .item_delete_btn{
+    color: #28B9B5;
+}
+
+.expenses .item_value,.expenses .item_delete_btn,.expenses .item__percentage{
+    color: #FF5049;
+}
+.item_delete{float: left}
+.item_delete_btn {
+	background: none;
+	border: none;
+	font-size: 22px;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+    display: none;
+}
+.item_delete_btn:focus{outline: none;}
+.item_delete_btn:active{transform: translateY(2px);}
+
+.item:hover .item_delete_btn{display:block;}
+.item:hover .item_value{transform: translateX(-20px);}
+.item:hover .item__percentage{transform: translateX(-20px);}
